@@ -17,11 +17,6 @@ services:
     expose:
       - 3000
     restart: unless-stopped
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
 
   telemetry-backend-shard:
     build:
@@ -38,11 +33,6 @@ services:
     expose:
       - 8001
     restart: unless-stopped
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
 
   telemetry-backend-core:
     build:
@@ -58,9 +48,4 @@ services:
     expose:
       - 8000
     restart: unless-stopped
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
-
+    
